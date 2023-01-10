@@ -151,6 +151,21 @@ img{
 	}
 	&__link {}
 }
+.header-page{
+	min-height: 50vh;
+	&::after,
+	&::before,
+	.header__content::before{
+		display: none;
+	}
+	.header__text{
+		margin: 0 auto;
+		text-align: center;
+	}
+	&.about{
+		background: linear-gradient(0deg, rgba(2, 57, 87, 0.1)), url('../images/content/design-bg.jpg')center / cover no-repeat;	
+	}
+}
 #main{}
 .title-section{
 	font-weight: 700;
@@ -593,6 +608,69 @@ img{
 		border: none;
 		cursor: pointer;
 	}
+}
+.footer {
+	font-family: 'Roboto', sans-serif;
+	background-color: #023957;
+	color: #fff;
+	padding: 5vh 0;
+	&__container {}
+	&__inner {
+		max-width: 1100px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+	}
+	&__info {
+		flex: 0 0 180px;
+		margin-right: 5vw;
+	}
+	&__logo {
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+	&__descr {
+		line-height: 150%;
+		margin-bottom: 2rem;
+	}
+	&__btn {}
+	&__navigation {
+		flex: 1 1 100%;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-around;
+	}
+	&__list-item {
+		&:not(:last-child) {
+			margin-right: 2rem;
+		}
+	}
+	&__list-title {
+		display: inline-block;
+		font-family: 'Poppins', sans-serif;
+		font-size: rem(24);
+		line-height: 170%;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+	&__sublist {}
+	&__sublist-item {
+		line-height: 150%;
+		&:not(:last-child){
+			margin-bottom: 1rem;
+		}
+	}
+	&__sublist-link {}
+}
+.sub-footer {
+	padding: 2rem 0;
+	text-align: center;
+	line-height: 170%;
+	color: #434343;
+	letter-spacing: 0.1em;
+	&__container {}
+	&__copy {}
 }
 
 @import 'media';
