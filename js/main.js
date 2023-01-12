@@ -14,3 +14,31 @@ document.querySelector('.menu__burger').addEventListener('click', function (e){
 	   document.querySelector('.header__menu').classList.add('active');
 	}
 });
+new Swiper ('.process__gallery-inner', {
+	pagination: {
+	    	el: '.swiper-pagination',
+	    	type: 'bullets',
+	    	clickable: true,
+	    	dynamicBullets: true,
+	  	},
+	  	keyboard: {
+	    	enabled: true,
+	    	onlyInViewport: false,
+	  	},
+	  	autoHeight: true,
+	  	grabCursor:true,
+		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 10,
+
+	breakpoints: {
+		475:{
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		}
+	}
+});
