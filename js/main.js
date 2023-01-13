@@ -27,7 +27,58 @@ new Swiper ('.process__gallery-inner', {
 	  	},
 	  	autoHeight: true,
 	  	grabCursor:true,
+		slidesPerView: 1,
+		spaceBetween: 10,
+
+	breakpoints: {
+		475:{
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		992: {
+			slidesPerView: 3,
+			spaceBetween: 30,
+		}
+	}
+});
+new Swiper ('.reviews__slider-inner', {
+	pagination: {
+	    	el: '.swiper-pagination',
+	    	type: 'bullets',
+	    	clickable: true,
+	    	dynamicBullets: true,
+	  	},
+	  	keyboard: {
+	    	enabled: true,
+	    	onlyInViewport: false,
+	  	},
+	  	autoHeight: true,
+	  	grabCursor:true,
 		loop: true,
+		slidesPerView: 1,
+		spaceBetween: 30,
+	breakpoints: {
+		700:{
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		}
+	}
+});
+new Swiper ('.reviews-gallery__gallery-inner', {
+	pagination: {
+	    	el: '.swiper-pagination',
+	    	type: 'bullets',
+	    	clickable: true,
+	    	dynamicBullets: true,
+	  	},
+	  	keyboard: {
+	    	enabled: true,
+	    	onlyInViewport: false,
+	  	},
+	  	autoHeight: true,
+	  	grabCursor:true,
 		slidesPerView: 1,
 		spaceBetween: 10,
 

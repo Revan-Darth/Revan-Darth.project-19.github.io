@@ -163,9 +163,7 @@ img{
 		margin: 0 auto;
 		text-align: center;
 	}
-	&.about-page,
-	&.contact-page,
-	&.gallery-page{
+	&.page{
 		background: linear-gradient(0deg, rgba(2, 57, 87, 0.1)), url('../images/content/design-bg.jpg')center / cover no-repeat;	
 	}
 }
@@ -887,6 +885,43 @@ img{
 .card-link {
 	align-self: start;
 }
+.card-list{
+	margin-bottom: 1.6rem;
+}
+.card-list__item{
+	&:not(:last-child){
+		margin-bottom: 6px;
+	}
+	position: relative;
+	padding-left: 24px;
+	font-size: 1rem;
+	line-height: 170%;
+	color: #434343;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 6px;
+		left: 0;
+		width: 15px;
+		height: 15px;
+	}
+}
+.card-list__item-experience{
+	&::before{
+		background: url('../images/icons/card-experience.svg')no-repeat;
+	}
+}
+.card-list__item-time{
+	&::before{
+		background: url('../images/icons/card-time.svg')no-repeat;
+	}
+}
+.card-list__item-money{
+	&::before{
+		top: 7px;
+		background: url('../images/icons/card-money.svg')no-repeat;
+	}
+}
 .news {
 	position: relative;
 	margin: 10vh 0;
@@ -934,7 +969,6 @@ img{
 		justify-content: center;
 		grid-gap: 10vh 20px;
 		margin-bottom: 10vh;
-
 	}
 	&__item {}
 	&__more {}
@@ -1019,4 +1053,168 @@ img{
 		background-color: #fff;
 	}
 }
+.career {
+	margin: 10vh 0;
+	&__container {}
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(360px,420px) );
+		justify-content: center;
+		grid-gap: 10vh 20px;
+		margin-bottom: 10vh;
+	}
+	&__more {}
+	&__more-btn {}
+}
+.reviews {
+	margin: 10vh 0;
+	&__container {}
+	&__slider {
+		padding-bottom: 36px;
+	}
+	&__item {
+		color: #434343;
+		padding: 20px 30px 36px 20px;
+		position: relative;
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		    background: linear-gradient(180deg, rgba(5, 96, 136, 0.8) 0%, rgba(2, 57, 87, 0.8) 100%),url(../images/content/services-item_bg.jpg) center/cover no-repeat;
+		    z-index: -1;
+		    transition-duration: .3s;
+		    opacity: 0;
+		    visibility: hidden;
+		}
+		&.swiper-slide-active{
+			color: #fff;
+			&::before{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&__image {
+		width: 102px;
+		margin-bottom: 2rem;
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__descr {
+		font-style: italic;
+		font-size: 1rem;
+		line-height: 170%;
+		margin-bottom: 1rem;
+	}
+	&__name {
+		font-style: italic;
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 170%;
+	}
+	.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main{
+		background-color: #023957;
+	}
+}
+.reviews-main {
+	background: linear-gradient(360deg, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%),url('../images/content/reviews-main__bg.jpg') center/cover no-repeat;
+	color: #fff;
+	padding: 6vh 0;
+	margin-bottom: 10vh;
+	&__container {}
+	&__wrapper {
+		max-width: 990px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__image {
+		max-width: 300px;
+		margin-right: 2vw;
+		img{
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__text {
+		flex: 0 1 520px;
+	}
+	&__title {
+		display: block;
+		color: #fff;
+		margin-bottom: 1rem;
+	}
+	&__descr {
+		line-height: 170%;
+	}
+}
+.reviews-gallery {
+	margin-bottom: 5vh;
+	&__gallery {}
+	&__container {}
+	&__title {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	&__gallery-inner {
+		padding-bottom: 36px;
+	}
+	&__gallery-slider {}
+	&__gallery-item {
+		max-width: 420px;
+		width: 100%;
+		img{
+			width: 100%;
+		}
+	}
+	.swiper-pagination-bullet-active.swiper-pagination-bullet-active-main{
+		background-color: #023957;
+	}
+}
+.services-page{
+	margin-top: 10vh;
+}
+.services-about {
+	margin-bottom: 10vh;
+	&__container {}
+	&__inner {}
+	&__item {
+		background: linear-gradient(360deg, rgba(2, 57, 87, 0.8) 0%, rgba(5, 96, 136, 0.8) 112.47%),url('../images/content/reviews-main__bg.jpg') center/cover no-repeat;
+		display: flex;
+		align-items: center;
+		&:nth-child(even){
+			flex-direction: row-reverse;
+		}
+		&:not(:last-child){
+			margin-bottom: 10vh;
+		}
+	}
+	&__image {
+		img{
+			max-width: 100%;
+		}
+	}
+	&__text {
+		max-width: 520px;
+		width: 100%;
+		padding: 20px;
+	}
+	&__title {
+		display: block;
+		margin-bottom: 0.6rem;
+		color: #fff;
+	}
+	&__descr {
+		line-height: 170%;
+		color: #fff;
+	}
+}
+
 @import 'media';
